@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Regex Object Demo</title>
+</head>
+<body>
+  <h2>JavaScript Regex Object Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    let text = "My email is example@test.com";
+    let regex = /\w+@\w+\.\w+/; // Pattern for email
+
+    output.innerHTML += "Text: " + text + "<br>";
+
+    // test()
+    output.innerHTML += "Regex test: " + regex.test(text) + "<br>";
+
+    // exec()
+    output.innerHTML += "Regex exec: " + regex.exec(text) + "<br>";
+
+    // replace()
+    let replaced = text.replace(regex, "user@domain.com");
+    output.innerHTML += "After replace(): " + replaced + "<br>";
+  </script>
+</body>
+</html>

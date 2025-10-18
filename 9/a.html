@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Functions All-in-One</title>
+<style>
+body{font-family:Arial;margin:20px;}input,button{padding:6px;margin:4px;}#out{margin-top:15px;font-weight:bold;}
+</style>
+</head>
+<body>
+
+<h2>JS Functions Demo - All in One</h2>
+<input type="number" id="num" placeholder="Enter a number">
+<button onclick="allFunctions()">Compute All</button>
+<div id="out"></div>
+
+<script>
+function allFunctions(){
+let num=parseInt(document.getElementById("num").value);
+let out=document.getElementById("out");
+if(isNaN(num)||num<0){ out.innerText="Enter a valid number"; return; }
+
+// Factorial
+let fact=1; for(let i=1;i<=num;i++) fact*=i;
+
+// Fibonacci
+let fib=[0,1]; for(let i=2;i<num;i++) fib[i]=fib[i-1]+fib[i-2];
+
+// Primes
+let primes=[]; for(let i=2;i<=num;i++){
+let prime=true; for(let j=2;j<=Math.sqrt(i);j++) if(i%j==0){prime=false;break;} if(prime) primes.push(i);}
+
+// Palindrome
+let s=num.toString(), r=s.split("").reverse().join("");
+let pal=s===r?"is a palindrome":"is not a palindrome";
+
+// Display
+out.innerHTML=`Factorial of ${num}: ${fact}<br>
+Fibonacci up to ${num}: ${fib.slice(0,num).join(", ")}<br>
+Primes up to ${num}: ${primes.join(", ")}<br>
+${num} ${pal}`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Demo</title>
+</head>
+<body>
+  <h2>JavaScript String Object Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+    let text = "  Hello JavaScript  ";
+
+    output.innerHTML += "Original String: '" + text + "'<br>";
+    output.innerHTML += "Length: " + text.length + "<br>";
+    output.innerHTML += "Upper Case: " + text.toUpperCase() + "<br>";
+    output.innerHTML += "Lower Case: " + text.toLowerCase() + "<br>";
+    output.innerHTML += "Character at index 6: " + text.charAt(6) + "<br>";
+    output.innerHTML += "Index of 'Java': " + text.indexOf("Java") + "<br>";
+    output.innerHTML += "Slice(2, 10): " + text.slice(2,10) + "<br>";
+    output.innerHTML += "Concatenate: " + text.concat(" is fun!") + "<br>";
+    output.innerHTML += "Replace 'JavaScript' with 'JS': " + text.replace("JavaScript","JS") + "<br>";
+    output.innerHTML += "Trimmed String: '" + text.trim() + "'<br>";
+  </script>
+</body>
+</html>

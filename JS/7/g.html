@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Demo</title>
+</head>
+<body>
+  <h2>JavaScript Date Object Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    let now = new Date();
+
+    output.innerHTML += "Current Date & Time: " + now + "<br>";
+    output.innerHTML += "Day: " + now.getDate() + "<br>";
+    output.innerHTML += "Month: " + (now.getMonth() + 1) + "<br>";
+    output.innerHTML += "Year: " + now.getFullYear() + "<br>";
+    output.innerHTML += "Hours: " + now.getHours() + "<br>";
+    output.innerHTML += "Minutes: " + now.getMinutes() + "<br>";
+    output.innerHTML += "Seconds: " + now.getSeconds() + "<br>";
+    output.innerHTML += "Date String: " + now.toDateString() + "<br>";
+    output.innerHTML += "Time String: " + now.toTimeString() + "<br>";
+  </script>
+</body>
+</html>

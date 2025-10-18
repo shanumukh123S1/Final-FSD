@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Color References</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    padding: 20px;
+}
+
+/* Color by Name */
+.color-name { color: red; }
+
+/* Color by HEX */
+.color-hex { color: #2ecc71; }
+
+/* Color by RGB */
+.color-rgb { color: rgb(255, 165, 0); }
+
+/* Color by RGBA (with transparency) */
+.color-rgba { color: rgba(0, 0, 255, 0.7); }
+
+/* Color by HSL */
+.color-hsl { color: hsl(300, 100%, 50%); }
+
+div.box {
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black;
+    display: inline-block;
+    text-align: center;
+    line-height: 80px;
+    font-weight: bold;
+}
+
+.bg-name { background-color: yellow; }
+.bg-hex { background-color: #ff5733; }
+.bg-rgb { background-color: rgb(135, 206, 235); }
+.bg-rgba { background-color: rgba(255, 0, 255, 0.5); }
+.bg-hsl { background-color: hsl(120, 60%, 70%); }
+
+</style>
+</head>
+<body>
+
+<h1>CSS Color References</h1>
+
+<p class="color-name">Text with Color Name (Red)</p>
+<p class="color-hex">Text with HEX Color (#2ecc71)</p>
+<p class="color-rgb">Text with RGB Color (Orange)</p>
+<p class="color-rgba">Text with RGBA Color (Blue with 70% opacity)</p>
+<p class="color-hsl">Text with HSL Color (Purple)</p>
+
+<h2>Background Color Examples</h2>
+<div class="box bg-name">Name</div>
+<div class="box bg-hex">HEX</div>
+<div class="box bg-rgb">RGB</div>
+<div class="box bg-rgba">RGBA</div>
+<div class="box bg-hsl">HSL</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JS Functions - Separate Buttons</title>
+<style>
+body{font-family:Arial;margin:20px;}
+input,button{padding:6px;margin:4px;font-size:16px;}
+#output{margin-top:15px;font-weight:bold;}
+</style>
+</head>
+<body>
+
+<h2>JavaScript Functions Demo</h2>
+<p>Enter a number and click a button to perform the calculation.</p>
+<input type="number" id="num" placeholder="Enter a number">
+<br>
+<button onclick="factorial()">Factorial</button>
+<button onclick="fibonacci()">Fibonacci</button>
+<button onclick="primes()">Prime Numbers</button>
+<button onclick="palindrome()">Palindrome</button>
+
+<div id="output"></div>
+
+<script>
+let out=document.getElementById("output");
+
+function getNum(){ return parseInt(document.getElementById("num").value); }
+
+function factorial(){
+    let n=getNum(); if(isNaN(n)||n<0){ out.innerText="Enter a valid number"; return; }
+    let f=1; for(let i=1;i<=n;i++) f*=i;
+    out.innerText=`Factorial of ${n}: ${f}`;
+}
+
+function fibonacci(){
+    let n=getNum(); if(isNaN(n)||n<0){ out.innerText="Enter a valid number"; return; }
+    let fib=[0,1]; for(let i=2;i<n;i++) fib[i]=fib[i-1]+fib[i-2];
+    out.innerText=`Fibonacci series up to ${n}: ${fib.slice(0,n).join(", ")}`;
+}
+
+function primes(){
+    let n=getNum(); if(isNaN(n)||n<2){ out.innerText="Enter number ≥2"; return; }
+    let p=[]; for(let i=2;i<=n;i++){ let prime=true; for(let j=2;j<=Math.sqrt(i);j++) if(i%j==0){prime=false; break;} if(prime)p.push(i); }
+    out.innerText=`Prime numbers up to ${n}: ${p.join(", ")}`;
+}
+
+function palindrome(){
+    let n=getNum(); if(isNaN(n)||n<0){ out.innerText="Enter a valid number"; return; }
+    let s=n.toString(), r=s.split("").reverse().join("");
+    out.innerText=`${n} ${s===r?"is a palindrome":"is not a palindrome"}`;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Selector Forms</title>
+<style>
+body { font-family: Arial; background:#f0f8ff; margin:10px; }
+h1 { text-align:center; color:#2c3e50; margin-bottom:15px; }
+section { padding:15px; margin-bottom:10px; border-radius:8px; box-shadow:1px 1px 5px rgba(0,0,0,0.2); }
+#simple { background:#ffebcc; } #intro { color:green; } .highlight { background:yellow; font-weight:bold; }
+#combinator { background:#d6eaf8; } div p { color:purple; } section>p { font-style:italic; } h2+p { color:brown; } h2~p { color:teal; }
+#pseudo { background:#fdebd0; } a { color:blue; text-decoration:none; } a:hover { color:red; text-decoration:underline; } p::first-letter { font-size:20px; font-weight:bold; color:orange; }
+#attribute { background:#d5f5e3; } input[type="text"] { border:2px solid blue; padding:5px; border-radius:5px; width:200px; }
+h2 { margin:5px 0; color:#1f618d; }
+</style>
+</head>
+<body>
+
+<h1>CSS Selector Forms</h1>
+
+<section id="simple">
+<h2>Simple Selectors</h2>
+<p id="intro">ID selector example <span class="highlight">highlighted text</span></p>
+<p class="highlight">Class selector example</p>
+</section>
+
+<section id="combinator">
+<h2>Combinator Selectors</h2>
+<div><p>Descendant selector (div p)</p></div>
+<section><p>Child selector (section>p)</p></section>
+<h2>Adjacent Sibling</h2><p>Adjacent sibling (h2+p)</p>
+<h2>General Sibling</h2><p>General sibling (h2~p)</p>
+</section>
+
+<section id="pseudo">
+<h2>Pseudo-class & Pseudo-element</h2>
+<a href="#">Hover over link</a>
+<p>First letter styled with pseudo-element</p>
+</section>
+
+<section id="attribute">
+<h2>Attribute Selector</h2>
+<input type="text" placeholder="Type here">
+</section>
+
+</body>
+</html>

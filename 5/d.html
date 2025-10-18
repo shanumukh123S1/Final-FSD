@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model Demo</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .margin {
+            background-color: pink;
+            padding: 10px;
+        }
+        .border {
+            background-color: lightblue;
+            border: 5px solid blue;
+            padding: 20px;
+        }
+        .padding {
+            background-color: lightgreen;
+            padding: 20px;
+        }
+        .content {
+            background-color: yellow;
+            width: 200px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Box Model Visual Demo</h2>
+    <div class="margin">
+        Margin
+        <div class="border">
+            Border
+            <div class="padding">
+                Padding
+                <div class="content">
+                    Content
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

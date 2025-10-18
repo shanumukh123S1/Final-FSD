@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Demo</title>
+</head>
+<body>
+  <h2>Array Object Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+    let fruits = ["Apple", "Banana", "Mango"];
+
+    output.innerHTML += "Original Array: " + fruits + "<br>";
+    fruits.push("Orange");
+    output.innerHTML += "After push('Orange'): " + fruits + "<br>";
+    fruits.pop();
+    output.innerHTML += "After pop(): " + fruits + "<br>";
+    fruits.unshift("Strawberry");
+    output.innerHTML += "After unshift('Strawberry'): " + fruits + "<br>";
+    fruits.shift();
+    output.innerHTML += "After shift(): " + fruits + "<br>";
+    fruits.sort();
+    output.innerHTML += "After sort(): " + fruits + "<br>";
+    fruits.reverse();
+    output.innerHTML += "After reverse(): " + fruits + "<br>";
+  </script>
+</body>
+</html>

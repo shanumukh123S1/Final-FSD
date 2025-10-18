@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Largest Number Demo</title>
+</head>
+<body>
+  <h2>Find the Largest Number</h2>
+  <div id="output"></div>
+
+  <script>
+    // Take input from user
+    let num1 = parseInt(prompt("Enter first number:"));
+    let num2 = parseInt(prompt("Enter second number:"));
+    let num3 = parseInt(prompt("Enter third number:"));
+
+    let output = document.getElementById("output");
+    let largest;
+
+    // Compare numbers using conditional statements
+    if(num1 === num2 && num2 === num3) {
+      largest = "EQUAL NUMBERS";
+    } else if(num1 >= num2 && num1 >= num3) {
+      largest = num1 + " LARGER NUMBER";
+    } else if(num2 >= num1 && num2 >= num3) {
+      largest = num2 + " LARGER NUMBER";
+    } else {
+      largest = num3 + " LARGER NUMBER";
+    }
+
+    // Display result in HTML and alert box
+    output.innerHTML = "<strong>Result:</strong> " + largest;
+    alert(largest);
+  </script>
+</body>
+</html>

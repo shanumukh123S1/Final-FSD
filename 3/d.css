@@ -1,0 +1,4 @@
+p {
+  color: blue;     /* selector = p, property = color, value = blue */
+  font-size: 18px; /* selector = p, property = font-size, value = 18px */
+}

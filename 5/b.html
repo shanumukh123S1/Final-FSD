@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fixed Tilted Background</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 200vh;
+    background: #f0f8ff;
+    color: #2c3e50;
+}
+
+.background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity:0.1;
+    transform: translate(-50%, -50%) rotate(-10deg);
+    width: 500px;
+    height: 500px;
+    background-image: url('SASII.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    border: 3px solid #3498db;
+    border-radius: 15px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.3);
+}
+
+.content {
+    text-align: center;
+    padding: 50px 20px;
+}
+h1 { color: #e74c3c; }
+p { font-size: 18px; margin: 15px 0; line-height: 1.5; }
+</style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="content">
+<h1>Fixed Tilted Background</h1>
+<p>This image is placed halfway down the page.</p>
+<p>It is slightly tilted horizontally using CSS.</p>
+<p>The image stays fixed even when you scroll up or down.</p>
+<p>Content appears in front of the background clearly.</p>
+<p>You can replace the image with any URL you like.</p>
+</div>
+
+</body>
+</html>

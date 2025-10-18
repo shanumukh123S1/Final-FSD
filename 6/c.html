@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Input Methods</title>
+</head>
+<body>
+  <h2>JavaScript: Different Input Methods</h2>
+
+  <!-- Input field -->
+  <input type="text" id="nameField" placeholder="Enter your name">
+  <button onclick="takeInput()">Submit</button>
+
+  <p id="outputArea"></p>
+
+  <script>
+    function takeInput() {
+      // 1. Taking input using prompt
+      let age = prompt("Enter your age:");
+
+      // 2. Taking input from form field
+      let name = document.getElementById("nameField").value;
+
+      // 3. Taking input using confirm
+      let confirmChoice = confirm("Do you want to proceed?");
+
+      // 4. Display output
+      document.getElementById("outputArea").innerHTML =
+        "Name: " + name + "<br>" +
+        "Age: " + age + "<br>" +
+        "Confirmed: " + (confirmChoice ? "Yes" : "No");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Window Object Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .output { margin-top: 15px; padding: 10px; border: 1px solid #ccc; background: #f0fff0; }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Window Object Properties and Methods</h2>
+  <button onclick="showWindowInfo()">Show Window Info</button>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    function showWindowInfo() {
+      let out = document.getElementById("output");
+
+      // Window properties
+      let width = window.innerWidth;
+      let height = window.innerHeight;
+      let url = window.location.href;
+      let domain = window.location.hostname;
+      let screenWidth = window.screen.width;
+      let screenHeight = window.screen.height;
+
+      out.innerHTML = `<strong>Window Inner Size:</strong> ${width} x ${height}px<br>`;
+      out.innerHTML += `<strong>Current URL:</strong> ${url}<br>`;
+      out.innerHTML += `<strong>Domain:</strong> ${domain}<br>`;
+      out.innerHTML += `<strong>Screen Resolution:</strong> ${screenWidth} x ${screenHeight}px<br><br>`;
+
+      // Window methods
+      alert("This is an alert using window.alert()");
+      let proceed = confirm("Do you want to continue?");
+      let name = prompt("Enter your name:");
+
+      out.innerHTML += `<strong>Confirmation:</strong> ${proceed ? "Yes" : "No"}<br>`;
+      out.innerHTML += `<strong>Name Entered:</strong> ${name}<br>`;
+    }
+  </script>
+</body>
+</html>

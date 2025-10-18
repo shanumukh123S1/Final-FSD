@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Semantic Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: yellow;
+        }
+        main {
+            display: flex;
+            padding: 20px;
+            background-color: #fff;
+        }
+        section {
+            flex: 3;
+            margin-right: 20px;
+        }
+        article {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        aside {
+            flex: 1;
+            background-color: #ffecb3;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        figure {
+            margin: 20px 0;
+            text-align: center;
+        }
+        figcaption {
+            background-color: #eee;
+            padding: 5px;
+            font-style: italic;
+        }
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML5 Semantic Layout</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> 
+        <a href="#">About</a> 
+        <a href="#">Services</a> 
+        <a href="#">Contact</a>
+    </nav>
+
+    <main>
+        <section>
+            <article>
+                <h2>Introduction to Semantic Tags</h2>
+                <p>Semantic tags like <span class="highlight">&lt;header&gt;</span> and <span class="highlight">&lt;footer&gt;</span> improve webpage structure.</p>
+            </article>
+
+            <article>
+                <h2>Why Use Them?</h2>
+                <p>They make code <span class="highlight">readable</span>, accessible, and SEO-friendly for search engines.</p>
+            </article>
+
+            <figure>
+                <img src="IT.png" alt="Sample">
+                <figcaption>IT</figcaption>
+            </figure>
+        </section>
+
+        <aside>
+            <h3>Quick Tips</h3>
+            <ul>
+                <li>Use semantic tags for clarity</li>
+                <li>Style with CSS for appeal</li>
+                <li>Combine with `<div>` & `<span>`</li>
+                <li>Improve accessibility</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Colorful Website | Designed with HTML5</p>
+    </footer>
+
+</body>
+</html>

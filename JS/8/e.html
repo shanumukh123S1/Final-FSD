@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Armstrong Number Check</title>
+</head>
+<body>
+  <h2>Armstrong Number Checker</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    // Take input from user
+    let num = parseInt(prompt("Enter a number:"));
+    let sum = 0;
+    let temp = num;
+
+    // Calculate sum of cubes of digits
+    while(temp > 0) {
+      let digit = temp % 10;
+      sum += digit ** 3;  // Cube of digit
+      temp = Math.floor(temp / 10);
+    }
+
+    // Check and display result
+    if(sum === num) {
+      output.innerHTML = num + " is an <strong>ARMSTRONG NUMBER</strong>.";
+      alert(num + " is an ARMSTRONG NUMBER.");
+    } else {
+      output.innerHTML = num + " is <strong>NOT an ARMSTRONG NUMBER</strong>.";
+      alert(num + " is NOT an ARMSTRONG NUMBER.");
+    }
+  </script>
+</body>
+</html>

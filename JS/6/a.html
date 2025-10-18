@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal and External JavaScript</title>
+    <script>
+        // Internal JavaScript
+        function internalJS() {
+            let name = prompt("Enter your name:");
+            alert("Hello, " + name + "! (From Internal JS)");
+        }
+    </script>
+    <script src="a.js"></script> <!-- External JavaScript -->
+</head>
+<body>
+    <h1>JavaScript: Internal and External Example</h1>
+    <button onclick="internalJS()">Run Internal JS</button>
+    <button onclick="externalJS()">Run External JS</button>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three-Part Frameset</title>
+</head>
+<frameset rows="30%,40%,30%" noresize>
+    <frame src="dframe1.html" name="imageFrame" noresize>
+    <frame src="dframe2.html" name="paragraphFrame" noresize>
+    <frame src="dframe3.html" name="linkFrame" noresize>
+
+    <noframes>
+        <body>
+            <h2>Frames Not Supported</h2>
+            <p>Your browser does not support frames. Please upgrade or view content below:</p>
+            <img src="sample.jpg" alt="Sample Image" width="200"><br>
+            <p>This is a descriptive paragraph for the second section.</p>
+            <a href="https://www.example.com">Visit Example Website</a>
+        </body>
+    </noframes>
+</frameset>
+</html>

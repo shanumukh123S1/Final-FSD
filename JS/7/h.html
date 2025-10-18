@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User-Defined Object Complete</title>
+</head>
+<body>
+  <h2>User-Defined Object Demo</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    // Constructor function
+    function Student(name, age, grade) {
+      // Properties
+      this.name = name;
+      this.age = age;
+      this.grade = grade;
+
+      // Method to display student info
+      this.display = function() {
+        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}`;
+      }
+
+      // Accessor - Getter for name
+      this.getName = function() {
+        return this.name;
+      }
+
+      // Accessor - Setter for grade
+      this.setGrade = function(newGrade) {
+        this.grade = newGrade;
+      }
+    }
+
+    // Create student object using constructor
+    let student1 = new Student("Rahul", 18, "A");
+
+    // Display original data
+    output.innerHTML += "Original Student Data: " + student1.display() + "<br>";
+
+    // Update grade using setter
+    student1.setGrade("A+");
+    output.innerHTML += "After updating grade: " + student1.display() + "<br>";
+
+    // Get name using getter
+    output.innerHTML += "Student Name using getter: " + student1.getName() + "<br>";
+  </script>
+</body>
+</html>

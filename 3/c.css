@@ -1,0 +1,6 @@
+/* External CSS */
+p {
+    color: green;           /* Selector: p | Property: color | Value: green */
+    font-size: 18px;        /* Selector: p | Property: font-size | Value: 18px */
+    border: 1px solid black;/* Selector: p | Property: border | Value: 1px solid black */
+}

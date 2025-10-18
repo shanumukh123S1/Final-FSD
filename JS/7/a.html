@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Object Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .output { margin-top: 15px; padding: 10px; border: 1px solid #ccc; background: #f0f8ff; }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Document Object Properties and Methods</h2>
+
+  <div class="output" id="output"></div>
+
+  <script>
+    let outputDiv = document.getElementById("output");
+
+    // Accessing document properties
+    let title = document.title;
+    let url = document.URL;
+    let domain = document.domain;
+
+    outputDiv.innerHTML += "<strong>Document Title:</strong> " + title + "<br>";
+    outputDiv.innerHTML += "<strong>Document URL:</strong> " + url + "<br>";
+    outputDiv.innerHTML += "<strong>Document Domain:</strong> " + domain + "<br><br>";
+
+    // Using document methods
+    let para = document.createElement("p");
+    para.textContent = "This paragraph is created dynamically using createElement() and appended with appendChild().";
+    document.body.appendChild(para);
+
+    // Modify existing element
+    outputDiv.style.color = "blue";
+    outputDiv.style.fontWeight = "bold";
+
+    // Optional: write directly to document (not recommended after page load)
+    // document.write("This line is added using document.write().");
+  </script>
+</body>
+</html>

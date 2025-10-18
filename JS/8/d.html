@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Object Iteration</title>
+</head>
+<body>
+  <h2>Object Data Iteration</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    // Simple object
+    let student = {
+      Name: "Narayana",
+      Age: 18,
+      Grade: "A"
+    };
+
+    // 1. for-in loop (keys)
+    output.innerHTML += "<strong>For-in Loop:</strong><br>";
+    for (let key in student) {
+      output.innerHTML += key + " = " + student[key] + "<br>";
+    }
+    output.innerHTML += "<br>";
+
+    // 2. forEach loop (values)
+    output.innerHTML += "<strong>forEach Loop:</strong><br>";
+    Object.values(student).forEach(value => {
+      output.innerHTML += value + "<br>";
+    });
+    output.innerHTML += "<br>";
+
+    // 3. for-of loop (entries)
+    output.innerHTML += "<strong>For-of Loop:</strong><br>";
+    for (let [key, value] of Object.entries(student)) {
+      output.innerHTML += key + " : " + value + "<br>";
+    }
+  </script>
+</body>
+</html>

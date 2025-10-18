@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Print 1 to 10 Loops</title>
+</head>
+<body>
+  <h2>Print Numbers from 1 to 10 Using Loops</h2>
+  <div id="output"></div>
+
+  <script>
+    let output = document.getElementById("output");
+
+    // For loop
+    output.innerHTML += "<strong>Using for loop:</strong> ";
+    for(let i = 1; i <= 10; i++) {
+      output.innerHTML += i + " ";
+    }
+    output.innerHTML += "<br><br>";
+
+    // While loop
+    output.innerHTML += "<strong>Using while loop:</strong> ";
+    let j = 1;
+    while(j <= 10) {
+      output.innerHTML += j + " ";
+      j++;
+    }
+    output.innerHTML += "<br><br>";
+
+    // Do-while loop
+    output.innerHTML += "<strong>Using do-while loop:</strong> ";
+    let k = 1;
+    do {
+      output.innerHTML += k + " ";
+      k++;
+    } while(k <= 10);
+  </script>
+</body>
+</html>
